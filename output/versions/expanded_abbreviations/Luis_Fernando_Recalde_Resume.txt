@@ -1,0 +1,120 @@
+                                       Luis F. Recalde
+              Robotics and Control Engineer | Nonlinear Control, Optimization and Autonomous Navigation
+                   Worcester, Massachusetts | lfrecalde@wpi.edu | GitHub | LinkedIn | Google Scholar
+
+Research Focus
+I am a research engineer with a Master of Science in Control Systems Engineering and a bachelor’s degree in Mechatronics
+Engineering. My research aims to enable fully onboard autonomous navigation in unstructured environments. I
+pursue this goal by developing control and estimation algorithms using nonlinear control theory, differential
+geometry, and numerical optimization. My work spans dynamical modeling, physics-based simulation, and
+real-world experiments.
+
+Experience
+  Graduate Research Assistant                                                                 January 2025 – Present
+  Worcester Polytechnic Institute | Aerial-Robot Control and Perception Lab               Worcester, Massachusetts
+    • Developed the laboratory’s C++/MuJoCo simulator using Robot Operating System 2 (ROS 2) for aerial
+
+      vehicles and cable-suspended payloads, integrating aerodynamic and motor dynamics with camera and light
+      detection and ranging (LiDAR) sensor simulation.
+    • Implemented incremental nonlinear dynamic inversion (INDI) body-rate control and a communication
+
+      protocol in Betaflight.
+  Visiting Researcher                                                                          May – December 2024
+  New York University | Agile Robotics and Perception Lab (now at the University of California, New York, New York
+  Berkeley)
+     • Developed and experimentally validated control using control Lyapunov functions and control barrier
+
+       functions for quadrotors with cable-suspended payloads, providing stability and camera field-of-view
+       guarantees across slack–taut transitions.
+  Research Engineer                                                                        March 2022 – March 2023
+  Universidad Indoamérica | Industrial Systems, Software and Automation Research Group;                       Ecuador
+  Human Sciences and Education Research Center
+     • Applied advanced optimization methods to robotic systems.
+
+  Research Engineer                                                                              May – October 2021
+  Escuela Superior Politécnica de Chimborazo                                                                   Ecuador
+     • Applied optimization methods to networked Internet of Things (IoT) sensing for road-safety applications.
+
+
+Technical Skills
+Optimization
+ • Model predictive control (MPC): Nonlinear model predictive control (NMPC) and model predictive contouring
+   control (MPCC); sequential quadratic programming (SQP) and its real-time iteration scheme (SQP-RTI), interior-point
+   methods, differential dynamic programming (DDP), and iterative linear quadratic regulator (iLQR).
+ • Nonsmooth and hybrid optimal control: complementarity-constrained formulations and relaxation methods for
+   trajectory optimization across mode transitions.
+ • Manifold optimization: Geometric formulations for robot pose estimation and control.
+ • Differentiable optimization: Implicit differentiation of Karush–Kuhn–Tucker (KKT) conditions to compute solution
+   sensitivities for gradient-based MPC tuning and learning.
+ • Distributed estimation and control: Alternating direction method of multipliers (ADMM) for distributed sensor
+   fusion and multi-robot coordination.
+Modeling and Control
+ • Geometric control on Lie groups: Controller design and stability analysis for attitude and pose tracking.
+ • Task-priority control: Null-space projection and affine-subspace methods for prioritizing robotic tasks (unmanned
+   aerial vehicle (UAV) inspection; tactile manipulation).
+ • Safety-critical control: Control Lyapunov functions (CLFs) and control barrier functions (CBFs) for robotic systems.
+ • Data-driven modeling and control: Dynamic mode decomposition with control (DMDc) and Koopman operator
+   approximations for robot dynamics identification and predictive modeling.
+
+
+
+
+Luis F. Recalde                                                                                                           1
+Technical Skills (continued)
+Perception and State Estimation
+ • Visual and tactile servoing: Image-based feedback with NMPC for UAV photovoltaic inspection; vision-based tactile
+   features and MPC for manipulator contour following.
+ • Odometry and sensor fusion: Dual-quaternion LiDAR odometry and mapping; contracting nonlinear observers for
+   LiDAR–inertial fusion.
+
+Education
+  Worcester Polytechnic Institute                                                            January 2025 – Present
+  Doctor of Philosophy in Robotics Engineering (in progress); advisor: Guanrui Li            Worcester, Massachusetts
+  Universidad Nacional de San Juan | Instituto de Automática                           May 2023 – December 2024
+  Master of Science in Control Systems Engineering; German Academic Exchange Service                        Argentina
+  (DAAD) scholarship
+  Universidad de las Fuerzas Armadas–ESPE                                                                        2021
+  Bachelor’s Degree in Mechatronics Engineering                                                              Ecuador
+Software and Tools
+  Programming: C++, Python, MATLAB.
+  Simulation: MuJoCo (C++ integration), MJX (JAX-accelerated MuJoCo), Newton, Webots.
+  Optimization: CasADi, acados, Crocoddyl, IPOPT, HPIPM, OSQP.
+  Middleware and Deployment: ROS 2, Zenoh, Linux, Git, Docker, Singularity.
+  Flight Systems: Betaflight, PX4, NVIDIA Jetson Orin NX.
+
+Selected Publications
+ [1] DQ-MPCC: Dual-Quaternion MPCC for Quadrotor Racing.
+     B. S. Guevara, Luis F. Recalde, G. Li, T. Nascimento. IEEE Robotics and Automation Letters, accepted, 2026.
+ [2] VBT-MPC: Vision-Based Tactile MPC for Contour Following.
+     E. Velasco-Sánchez, Luis F. Recalde, G. Li, P. Gil. IEEE Robotics and Automation Letters, 11(7), 8504–8511, 2026.
+ [3] ES-HPC-MPC: Exponentially Stable Hybrid Perception Constrained MPC for Quadrotor with
+     Suspended Payloads.
+     Luis F. Recalde, M. Sarvaiya, G. Loianno, G. Li. IEEE Robotics and Automation Letters, 11(1), 266–273, 2026.
+ [4] DQ-NMPC: Dual-Quaternion NMPC for Quadrotor Flight.
+     Luis F. Recalde, D. Agrawal, J. Arrizabalaga, G. Li. IEEE Robotics and Automation Letters, 2025.
+ [5] DualQuat-LOAM: LiDAR Odometry and Mapping Parametrized on Dual Quaternions.
+     E. P. Velasco-Sánchez, Luis F. Recalde et al. Robotics and Autonomous Systems, 191, 105009, 2025.
+ [6] Visual Servoing NMPC Applied to UAVs for Photovoltaic Array Inspection.
+     E. P. Velasco-Sánchez, Luis F. Recalde et al. IEEE Robotics and Automation Letters, 9(3), 2766–2773, 2024.
+ [7] A Comparative Study between NMPC and Baseline Feedback Controllers for UAV Trajectory Tracking.
+     B. S. Guevara, Luis F. Recalde et al. Drones, 7(2), 144, 2023.
+ [8] Quadcopters Control Using Online Dynamic Mode Decomposition.
+     B. S. Guevara, Luis F. Recalde et al. IFAC-PapersOnLine, 56(3), 589–594, 2023.
+ [9] System Identification and Nonlinear Model Predictive Control with Collision Avoidance Applied in
+     Hexacopters UAVs.
+     Luis F. Recalde et al. Sensors, 22(13), 4712, 2022.
+[10] Three-Dimensional Unified Motion Control of a Robotic Standing Wheelchair for Rehabilitation
+     Purposes.
+     J. S. Ortiz, G. Palacios-Navarro, V. H. Andaluz, Luis F. Recalde. Sensors, 21(9), 3057, 2021.
+
+Service
+Peer Review: IEEE Robotics and Automation Letters; IEEE Control Systems Letters;
+IEEE International Conference on Robotics and Automation (ICRA); IEEE/RSJ International Conference on Intelligent
+Robots and Systems (IROS).
+
+Languages
+Spanish (native); English (B2, Common European Framework of Reference for Languages).
+
+
+Luis F. Recalde                                                                                                         2
+

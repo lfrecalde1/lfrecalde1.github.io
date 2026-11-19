@@ -1,0 +1,244 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Keep the original serif appearance while encoding accented characters directly.
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\input{glyphtounicode}
+
+% Two coordinated accent colors; body text and publication titles remain black.
+% Edit these HEX values to change the palette.
+\definecolor{HeadingNavy}{HTML}{334E68}
+\definecolor{AuthorTeal}{HTML}{14665E}
+\hypersetup{
+  colorlinks=true,
+  urlcolor=HeadingNavy,
+  linkcolor=HeadingNavy,
+  pdftitle={Luis F. Recalde - Curriculum Vitae},
+  pdfauthor={Luis F. Recalde}
+}
+\newcommand{\authorname}{\textcolor{AuthorTeal}{\textbf{Luis F. Recalde}}}
+\newcommand{\journal}[1]{\textcolor{HeadingNavy}{#1}}
+\newcommand{\papertitle}[1]{\textcolor{black}{\textbf{#1}}}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\setlength{\footskip}{18pt}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot[R]{\footnotesize\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+\setlength{\headwidth}{\textwidth}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+
+% Light section bands separate the main sections without adding more accent colors.
+\newcommand{\sectionband}[1]{%
+  \begingroup
+  \setlength{\fboxsep}{3pt}%
+  \colorbox{HeadingNavy!6}{%
+    \makebox[\dimexpr\linewidth-2\fboxsep\relax][l]{%
+      \textcolor{AuthorTeal}{\rule[-2pt]{2pt}{12pt}}\hspace{6pt}%
+      \MakeUppercase{#1}}}%
+  \endgroup
+}
+\titleformat{\section}{
+  \sffamily\bfseries\upshape\raggedright\fontsize{13}{15}\selectfont\color{HeadingNavy}
+}{}{0em}{\sectionband}
+\titlespacing*{\section}{0pt}{12pt}{5pt}
+
+% Preserve Unicode text mappings for PDF text extraction (not an ATS guarantee).
+\pdfgentounicode=1
+% Emit explicit word spaces as well as positioning them visually.
+\pdfinterwordspaceon
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item {\small #1\par}\vspace{-2pt}
+}
+
+% Ordinary paragraphs keep each date beside its role or institution in extracted text.
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \textbf{#1}\enspace\textbar\enspace #2\\
+    {\small\textit{#3\enspace\textbar\enspace #4}\par}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item {\small\textit{#1\enspace\textbar\enspace #2}\par}\vspace{-5pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item {\small #1\enspace\textbar\enspace #2\par}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{\textbullet}
+\renewcommand\labelitemii{\textbullet}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}, topsep=3pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+\begin{center}
+\textcolor{AuthorTeal}{\textbf{\Huge Luis F. Recalde}} \\ \vspace{3pt}
+\small Robotics \& Controls Research Engineer $|$ Nonlinear Control, Optimization \& Autonomous Navigation \\ \vspace{3pt}
+Worcester, MA $|$ \href{mailto:lfrecalde@wpi.edu}{lfrecalde@wpi.edu} $|$
+\href{https://github.com/lfrecalde1}{GitHub} $|$
+\href{https://www.linkedin.com/in/luis-f-recalde-8a6432123}{LinkedIn} $|$
+\href{https://scholar.google.com/citations?user=_v1511cAAAAJ}{Google Scholar}
+\end{center}
+\vspace{-12pt}
+\section{Research Focus}
+{\small I am a research engineer and PhD candidate in Robotics Engineering at Worcester Polytechnic Institute.
+I hold an MSc in Control Systems Engineering and a bachelor's degree in Mechatronics Engineering.
+My research aims to enable \textbf{fully onboard autonomous navigation in unstructured environments}.
+I develop control and estimation algorithms using \textbf{nonlinear control theory, differential geometry, and numerical optimization}.
+I take these methods from dynamical models and physics-based simulation to \textbf{real-world experiments}.\par}
+\section{Research Experience}
+\resumeSubHeadingListStart
+\resumeSubheading{Graduate Research Assistant}{Jan 2025 -- Present}
+{Worcester Polytechnic Institute $|$ \href{https://acp-lab.github.io/acplab-web/}{Aerial-Robot Control and Perception Lab}}{Worcester, MA}
+\resumeItemListStart
+\resumeItem{Developed \href{https://acp-lab.github.io/acplab-web/}{ACP Lab}'s \textbf{C++/ROS 2 MuJoCo simulator} for aerial vehicles and cable-suspended payloads, combining aerodynamic and motor dynamics with simulated cameras and LiDAR.}
+\resumeItem{Implemented \textbf{incremental nonlinear dynamic inversion (INDI)} body-rate control and a communication protocol in Betaflight.}
+\resumeItemListEnd
+\resumeSubheading{Visiting Researcher}{May 2024 -- Dec 2024}
+{New York University $|$ \href{https://arplaboratory.github.io/}{Agile Robotics and Perception Lab}}{New York, NY}
+\resumeItemListStart
+\resumeItem{Developed controllers using \textbf{control Lyapunov functions (CLFs)} and \textbf{control barrier functions (CBFs)} for quadrotors with cable-suspended payloads, proving \textbf{stability and camera field-of-view safety guarantees}.}
+\resumeItemListEnd
+\resumeSubheading{Research Engineer}{Mar 2022 -- Mar 2023}
+{Universidad Indoam\'erica $|$ SISAU Research Group and CICHE}{Ecuador}
+\resumeItemListStart
+\resumeItem{Applied optimization methods to robotic systems.}
+\resumeItemListEnd
+\resumeSubheading{Research Engineer}{May 2021 -- Oct 2021}
+{Escuela Superior Polit\'ecnica de Chimborazo}{Ecuador}
+\resumeItemListStart
+\resumeItem{Applied optimization methods to networked Internet of Things (IoT) sensing for road-safety applications.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\section{Technical Skills}
+{\small\textbf{Optimization}\par}
+\begin{itemize}[leftmargin=0.22in, itemsep=2pt, parsep=0pt, topsep=4pt]
+\small
+\item \textbf{Model predictive control (MPC):} \href{https://arxiv.org/abs/2510.11525}{Nonlinear model predictive control (NMPC)} and \href{https://arxiv.org/abs/2609.36482}{model predictive contouring control (MPCC)}; solution methods include sequential quadratic programming (SQP), SQP with real-time iteration (SQP-RTI), interior-point methods, differential dynamic programming (DDP), and iterative linear quadratic regulator (iLQR).
+\item \textbf{Nonsmooth and hybrid optimal control:} complementarity-constrained formulations and relaxation methods for trajectory optimization across hybrid mode transitions.
+\item \textbf{Manifold optimization:} Geometric formulations for \href{https://arxiv.org/abs/2410.13541}{robot pose estimation} and \href{https://arxiv.org/abs/2510.11525}{control}.
+\item \textbf{Differentiable optimization:} Implicit Karush--Kuhn--Tucker (KKT) differentiation to compute solution sensitivities for gradient-based MPC tuning and learning.
+\item \textbf{Distributed estimation and control:} Alternating direction method of multipliers (ADMM) for distributed sensor fusion and multi-robot coordination.
+\end{itemize}
+{\small\textbf{Modeling and Control}\par}
+\begin{itemize}[leftmargin=0.22in, itemsep=2pt, parsep=0pt, topsep=4pt]
+\small
+\item \textbf{Geometric control on Lie groups:} Controller design and \href{https://arxiv.org/abs/2504.08841}{stability analysis} for \href{https://arxiv.org/abs/2510.11525}{attitude and pose tracking}.
+\item \textbf{Task-priority control:} Null-space projection and affine-subspace methods for prioritizing robotic tasks (\href{https://arxiv.org/abs/2311.08019}{unmanned aerial vehicle (UAV) inspection}; \href{https://arxiv.org/abs/2605.20392}{tactile manipulation}).
+\item \textbf{Safety-critical control:} \href{https://arxiv.org/abs/2504.08841}{CLFs} and \href{https://arxiv.org/abs/2504.08841}{CBFs} for robotic systems.
+\item \textbf{Data-driven modeling and control:} \href{https://www.mdpi.com/1424-8220/22/13/4712}{Dynamic mode decomposition with control (DMDc)} and Koopman operator approximations for robot dynamics identification and predictive modeling.
+\end{itemize}
+\newpage
+\section{Technical Skills}
+{\small\textbf{Perception and State Estimation}\par}
+\begin{itemize}[leftmargin=0.22in, itemsep=2pt, parsep=0pt, topsep=4pt]
+\small
+\item \textbf{Visual and tactile servoing:} Image-based feedback with NMPC for \href{https://doi.org/10.1109/LRA.2024.3360876}{UAV photovoltaic array inspection}; vision-based tactile features and MPC for \href{https://doi.org/10.1109/LRA.2026.3698362}{manipulator contour following}.
+\item \textbf{Odometry and sensor fusion:} \href{https://doi.org/10.1016/j.robot.2025.105009}{Dual-quaternion LiDAR odometry and mapping}; contracting nonlinear observers for LiDAR--inertial fusion.
+\end{itemize}
+
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading{Worcester Polytechnic Institute}{Jan 2025 -- Present}
+{PhD in Robotics Engineering, in progress $|$ Advisor: Prof. Guanrui Li}{Worcester, MA}
+\resumeSubheading{Universidad Nacional de San Juan (INAUT)}{May 2023 -- Dec 2024}
+{MSc in Control Systems Engineering $|$ DAAD scholarship recipient}{Argentina}
+\resumeSubheading{Universidad de las Fuerzas Armadas--ESPE}{2021}
+{Bachelor's Degree in Mechatronics Engineering}{Ecuador}
+\resumeSubHeadingListEnd
+
+\section{Software and Tools}
+\begin{itemize}[leftmargin=0.15in, label={}, itemsep=2pt, parsep=0pt, topsep=3pt]
+\small
+\item \textbf{Programming:} C++, Python, MATLAB.
+\item \textbf{Simulation:} MuJoCo (C++ integration), MJX (JAX backend), Newton, Webots.
+\item \textbf{Optimization:} CasADi, acados, Crocoddyl, IPOPT, HPIPM, OSQP.
+\item \textbf{Middleware and Deployment:} Robot Operating System 2 (ROS 2), Zenoh, Linux, Git, Docker, Singularity.
+\item \textbf{Flight Systems:} Betaflight, PX4.
+\end{itemize}
+
+\section{Publications}
+\begin{enumerate}[leftmargin=0.28in, label={[\arabic*]}, itemsep=3pt, parsep=0pt, topsep=3pt]
+\small
+\item \href{https://arxiv.org/abs/2609.36482}{\papertitle{DQ-MPCC: Dual-Quaternion MPCC for Quadrotor Racing.}}\\
+B. S. Guevara, \authorname, G. Li, T. Nascimento. \journal{IEEE RA-L}, accepted, 2026.
+\item \href{https://doi.org/10.1109/LRA.2026.3698362}{\papertitle{VBT-MPC: Vision-Based Tactile MPC for Contour Following.}}\\
+E. Velasco-S\'anchez, \authorname, G. Li, P. Gil. \journal{IEEE RA-L}, 11(7), 8504--8511, 2026.
+\item \href{https://doi.org/10.1109/LRA.2025.3632070}{\papertitle{ES-HPC-MPC: Exponentially Stable Hybrid Perception Constrained MPC for Quadrotor with Suspended Payloads.}}\\
+\authorname, M. Sarvaiya, G. Loianno, G. Li. \journal{IEEE RA-L}, 11(1), 266--273, 2026.
+\item \href{https://doi.org/10.1109/LRA.2025.3623022}{\papertitle{DQ-NMPC: Dual-Quaternion NMPC for Quadrotor Flight.}}\\
+\authorname, D. Agrawal, J. Arrizabalaga, G. Li. \journal{IEEE RA-L}, 2025.
+\item \href{https://doi.org/10.1016/j.robot.2025.105009}{\papertitle{DualQuat-LOAM: LiDAR Odometry and Mapping Parametrized on Dual Quaternions.}}\\
+E. P. Velasco-S\'anchez, \authorname\ et al. \journal{Robotics and Autonomous Systems}, 191, 105009, 2025.
+\item \href{https://doi.org/10.1109/LRA.2024.3360876}{\papertitle{Visual Servoing NMPC Applied to UAVs for Photovoltaic Array Inspection.}}\\
+E. P. Velasco-S\'anchez, \authorname\ et al. \journal{IEEE RA-L}, 9(3), 2766--2773, 2024.
+\item \href{https://doi.org/10.3390/drones7020144}{\papertitle{A Comparative Study between NMPC and Baseline Feedback Controllers for UAV Trajectory Tracking.}}\\
+B. S. Guevara, \authorname\ et al. \journal{Drones}, 7(2), 144, 2023.
+\item \href{https://doi.org/10.1016/j.ifacol.2023.12.088}{\papertitle{Quadcopters Control Using Online Dynamic Mode Decomposition.}}\\
+B. S. Guevara, \authorname\ et al. \journal{IFAC-PapersOnLine}, 56(3), 589--594, 2023.
+\item \href{https://doi.org/10.3390/s22134712}{\papertitle{System Identification and Nonlinear Model Predictive Control with Collision Avoidance Applied in Hexacopters UAVs.}}\\
+\authorname\ et al. \journal{Sensors}, 22(13), 4712, 2022.
+\item \href{https://doi.org/10.3390/s21093057}{\papertitle{Three-Dimensional Unified Motion Control of a Robotic Standing Wheelchair for Rehabilitation Purposes.}}\\
+J. S. Ortiz, G. Palacios-Navarro, V. H. Andaluz, \authorname. \journal{Sensors}, 21(9), 3057, 2021.
+\end{enumerate}
+\section{Service}
+{\small
+\textbf{Peer Review:} IEEE Robotics and Automation Letters (RA-L); IEEE Control Systems Letters (L-CSS); Robotics and Autonomous Systems (RAS);\\
+IEEE International Conference on Robotics and Automation (ICRA); IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS).\par}
+\end{document}

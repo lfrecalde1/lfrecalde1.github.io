@@ -1,0 +1,125 @@
+LUIS F. RECALDE — CV TECHNICAL AND EDITORIAL REVIEW
+Reviewed 18 November 2026
+
+Assessment
+The core research narrative is technically coherent and supported by your papers: nonlinear predictive control, geometric pose representations, hybrid payload dynamics, tactile servoing, and LiDAR odometry. This is a claim-level CV review, not an independent reproduction of experiments or a proof audit. Employment details and proficiency cannot be fully verified from publications.
+Fully onboard autonomous navigation in unstructured environments is presented as Luis's stated research aim, not as an already demonstrated end-to-end capability or a safety guarantee.
+
+Verified research and wording decisions
+1. DQ-NMPC: authorship, RA-L acceptance, 13.66 m/s, and 4.2 g are supported. Table III reports a 56.11% position-error reduction at 7.5 m/s, distinct from the maximum-speed experiment. At Luis's request, the experience bullet containing these results has been removed. The publication remains listed.
+Source: https://arxiv.org/html/2510.11525v1
+
+2. ES-HPC-MPC: the paper describes stability and perception guarantees using ES-CLFs and CBFs for quadrotors with cable-suspended payloads across slack/taut modes, with simulation and hardware validation. The revised NYU bullet explicitly names the system and these guarantees. They refer to the method's modeled setting and assumptions, not an unconditional guarantee for arbitrary physical conditions. Its 2026 publication year is retained from your supplied CV; the accessible arXiv record confirms RA-L acceptance but does not independently establish the journal issue metadata. IEEE access was blocked. A 2025 DOI and a 2026 issue year are not inherently inconsistent.
+Source: https://arxiv.org/abs/2504.08841
+Full-text wording checked: https://arxiv.org/html/2504.08841v2
+
+3. DQ-MPCC: authorship and racing scope match. The ACP Lab homepage announces RA-L acceptance on November 4, 2026, resolving the earlier discrepancy with the older arXiv submission status. The CV now lists IEEE RA-L, accepted, 2026. At Luis's request, the combined DQ-MPCC/VBT-MPC experience bullet remains removed; both publications remain listed.
+Source: https://arxiv.org/abs/2609.36482
+Acceptance confirmation: https://acp-lab.github.io/acplab-web/
+
+4. VBT-MPC: authorship, tactile contour-following scope, and RA-L 11(7), 8504–8511 (2026), DOI 10.1109/LRA.2026.3698362, match the authors' project page. “Vision-based tactile” means visual measurement of tactile sensor deformation; it should not be described as ordinary external-camera object tracking.
+Source: https://aurova.ua.es/VBT-MPC/
+
+5. DualQuat-LOAM: authorship, LiDAR odometry/mapping scope, and Robotics and Autonomous Systems 191, 105009 (2025) match the record. This publication does not establish an IMU-fusion implementation; the concise resume keeps the supported LiDAR scope.
+Source: https://arxiv.org/abs/2410.13541
+
+6. Visual-servoing PV inspection: authorship, UAV visual servoing with NMPC, and RA-L acceptance are supported. The accessible preprint links the supplied DOI; detailed issue/page metadata were not independently checked.
+Source: https://arxiv.org/abs/2311.08019
+
+7. Online dynamic mode decomposition: the publisher confirms DMD with control (DMDc), online identification, and hardware-in-the-loop evaluation. This is not evidence of unrestricted real-flight validation or exact nonlinear Koopman models.
+Source: https://www.sciencedirect.com/science/article/pii/S2405896323024217
+
+8. Education: WPI's lab profile supports your PhD-student status, prior NYU visit, master's degree in 2024, and mechatronics degree in 2021. Exact month ranges remain supplied information. Luis corrected the master's degree end date to December 2024; the CV now lists May 2023–December 2024.
+Source: https://acp-lab.github.io/acplab-web/author/luis-fernando-recalde/
+
+9. Visiting research affiliation: ARPL's official website announces its move to UC Berkeley on August 27, 2025. The May–December 2024 appointment remains attributed to New York University in New York, with “now at UC Berkeley” attached to the lab name. Luis corrected the end date to December 2024 in this conversation. The lab name links to its current website. The current bullet starts with “Developed,” expands control Lyapunov functions and control barrier functions, and names quadrotors with cable-suspended payloads, stability, and camera field-of-view safety under hybrid slack–taut dynamics. The experimental-validation wording was removed at Luis’s request.
+Source: https://arplaboratory.github.io/
+
+Technical precision in the longer source CV
+- At Luis's request, both firmware and onboard controller frequency figures were removed. The experience bullet now reads: “Implemented INDI body-rate control and a communication protocol in Betaflight.” Firmware code and timing logs were not audited.
+- Unit dual quaternions represent rigid poses with constraints and a sign ambiguity. Avoid calling this a minimal or unique global pose parameterization, or suggesting it introduces physical coupling absent from conventional rigid-body dynamics.
+- CLF/CBF guarantees depend on assumptions, feasibility, implementation, and hybrid-transition treatment. “Experimentally evaluated” is appropriate for a short CV.
+- KKT-based sensitivities require regularity; complementarity and switching can make solutions nonsmooth. Your original wording names a valid technique but does not independently demonstrate expertise.
+- iLQR and DDP are related, not identical algorithms; SQP-RTI is a particular real-time iteration scheme. ADMM does not automatically give global convergence for nonconvex robotic problems.
+- Inertial fusion, contracting observers, differentiable MPC, ADMM, complementarity methods, and the broader simulator/tool list remain supplied skills; the selected papers do not independently substantiate every skill or implementation. The invariant/equivariant filtering bullet has been removed at Luis’s request.
+
+Items to confirm before sending
+- Luis corrected the Universidad Indoamérica appointment to March 2022–March 2023, resolving the previously noted overlap with NYU and WPI. He also clarified the ESPOCH work as applying optimization methods to networked IoT sensing; the revised bullet retains the supplied road-safety application context.
+- Simulator/firmware contributions and hardware remain based on Luis's supplied information. The onboard-to-flight-controller communication protocol is included as requested; no protocol standard, transport, frequency, or latency claim is invented.
+- Luis clarified that the MuJoCo simulator supports aerial vehicles and cable-suspended payloads, cameras, and LiDAR including 360-degree Livox sensing. At Luis's subsequent request, the Livox-specific wording was removed from the CV; the bullet retains camera and LiDAR simulation without naming a sensor model.
+- DAAD scholarship retained as supplied; exact award title/dates were not verified.
+- Reviewing, English B2, and software proficiency remain self-reported. The WPI teaching/course entry has been removed at Luis’s request. Service and Languages are now separate sections.
+- Reviewing service includes IEEE Robotics and Automation Letters (RA-L), plus IEEE Control Systems Letters (L-CSS), ICRA, and IROS as confirmed by Luis in this conversation. No review years or counts were supplied.
+- No job description was supplied during preparation. This version targets robotics/control engineering broadly; no expected graduation date, phone number, or unsupported performance metrics were invented.
+
+Deliverables and build
+Luis_Fernando_Recalde_Resume.pdf: two-page resume using the supplied Jake template.
+Luis_Fernando_Recalde_Resume.tex: editable LaTeX, retaining template attribution.
+Luis_Fernando_Recalde_Resume.txt: PDF text extraction for review/application forms.
+Compile with pdfLaTeX, twice, or upload the .tex to Overleaf. Original ZIP files remain unchanged. The full academic CV remains in source_cv; the two-page version includes ten selected papers, expanded technical skills, software/tools, reviewing service, and languages.
+
+Skills connected to the selected papers
+The Optimization subsection has five bullets following Luis's supplied wording. The solution methods remain within the model predictive control bullet. Colored links connect nonlinear MPC to DQ-NMPC, MPCC to DQ-MPCC, pose estimation to DualQuat-LOAM, and geometric control to DQ-NMPC. Complementarity methods, KKT differentiation, and ADMM remain supplied skills without paper links because the selected papers do not establish those specific contributions. Distributed sensor fusion and multi-robot coordination are included as supplied applications of ADMM.
+- DQ-NMPC and DQ-MPCC: nonlinear/contouring predictive control, dual-quaternion pose representations, geometric optimization, quadrotor tracking and racing.
+- ES-HPC-MPC: CLF/CBF-based stability and perception constraints; cable-suspended payload dynamics and slack–taut transitions. Complementarity methods are a separate supplied skill, not attributed to this paper.
+- VBT-MPC: vision-based tactile feedback and predictive control for manipulator contour following.
+- DualQuat-LOAM: geometric pose estimation, LiDAR odometry, and mapping. Inertial fusion is a separate supplied skill, not attributed to this paper.
+- Visual Servoing NMPC: image-based feedback and predictive control for UAV photovoltaic inspection.
+- Online Dynamic Mode Decomposition: DMDc-based online dynamics identification and control.
+
+Layout update
+Page 1: Research Focus, Experience, Technical Skills (Optimization; Modeling and Control).
+Page 2: Technical Skills continued (Perception and State Estimation), Education, Software and Tools, Selected Publications, Service, Languages.
+
+Modeling and Control revision
+Four condensed bullets now distinguish geometric control, task-priority control, safety-critical control, and data-driven modeling/control. Colored links connect attitude/pose tracking to DQ-NMPC, stability analysis and CLF/CBF terms to ES-HPC-MPC, and DMDc to the Sensors 2022 system-identification paper, following Luis’s latest link preference. Task-priority control now links to the photovoltaic inspection and tactile manipulation papers following Luis's clarification and a full-text check. No Koopman-specific paper link is asserted. The earlier INDI mention in this skills subsection is replaced by the requested categories; INDI remains in professional experience.
+DMDc authorship and scope cross-check: https://repositorio.uti.edu.ec/items/a02537cf-5142-4135-a640-c12582cb636e/full
+
+Task-priority paper links
+The Task-priority control bullet now includes two colored application links. The photovoltaic inspection paper explicitly uses a null-space projector in Section II-C.1, Eq. (8), to combine image-feature tracking with desired UAV velocities. The VBT-MPC paper includes null-space visual-tactile servoing controllers in Section IV-A/B, Eqs. (16), (18), and (19). These are the comparison controllers in that paper; the bullet does not describe the VBT-MPC optimizer itself as a null-space controller. Luis supplied the individual contribution attribution. The paper links support the null-space component of the skill; affine-subspace experience remains supplied information.
+Sources: https://arxiv.org/html/2311.08019v2 and https://arxiv.org/pdf/2605.20392
+
+Publication expansion
+Three additional papers are retained in Selected Publications alongside all seven earlier entries. The two IEEE Access papers on unmodeled dynamics and aerial robotic manipulator simulation were removed at Luis’s request; their verification records are retained below for reference only. The photovoltaic inspection paper was already included and is not duplicated. The Sensors 2022 paper is placed in Publications, as requested; the Data-driven modeling and control skill wording is unchanged, and its DMDc link now points to the Sensors paper at Luis’s subsequent request. All ten publication titles link to the respective paper. Citation counts and journal rankings from the supplied list are not reproduced because they are source- and date-dependent; the list was used to select the additions.
+
+- A Comparative Study between NMPC and Baseline Feedback Controllers for UAV Trajectory Tracking. B. S. Guevara, L. F. Recalde, J. Varela-Aldás, V. H. Andaluz, D. C. Gandolfo, J. M. Toibero. Drones 7(2), 144 (2023). DOI: 10.3390/drones7020144.
+Publisher: https://www.mdpi.com/2504-446X/7/2/144
+- System Identification and Nonlinear Model Predictive Control with Collision Avoidance Applied in Hexacopters UAVs. L. F. Recalde, B. S. Guevara, C. P. Carvajal, V. H. Andaluz, J. Varela-Aldás, D. C. Gandolfo. Sensors 22(13), 4712 (2022). DOI: 10.3390/s22134712. The publisher describes a comparison of Euler–Lagrange and DMD models and NMPC with collision avoidance, including simulation and real experiments. It is not used as a claim of a Koopman-specific contribution.
+Publisher: https://www.mdpi.com/1424-8220/22/13/4712
+- Three-Dimensional Unified Motion Control of a Robotic Standing Wheelchair for Rehabilitation Purposes. J. S. Ortiz, G. Palacios-Navarro, V. H. Andaluz, L. F. Recalde. Sensors 21(9), 3057 (2021). DOI: 10.3390/s21093057.
+Publisher: https://www.mdpi.com/1424-8220/21/9/3057
+- Estimation of Unmodeled Dynamics: Nonlinear MPC and Adaptive Control Law With Momentum Observer Dynamic. B. S. Guevara, L. F. Recalde, V. Moya, J. Varela-Aldás, D. C. Gandolfo, J. M. Toibero. IEEE Access 12, 77121–77132 (2024). DOI: 10.1109/ACCESS.2024.3407684.
+Publisher: https://ieeexplore.ieee.org/document/10542329/
+Author PDF: https://ri.conicet.gov.ar/bitstream/handle/11336/258496/CONICET_Digital_Nro.44e5d4f1-eaec-48a3-8ee6-2a6ec41dde4d_B.pdf?sequence=2
+- Open-Access Platform for the Simulation of Aerial Robotic Manipulators. J. Varela-Aldás, L. F. Recalde, B. S. Guevara, V. H. Andaluz, D. C. Gandolfo. IEEE Access 12, 49735–49751 (2024). DOI: 10.1109/ACCESS.2024.3384986. This is a separate platform from the ACP Lab MuJoCo simulator in the Experience section.
+Institutional record: https://repositorio.uti.edu.ec/items/4905d525-c755-4302-9f00-0ca7a084ef18
+Author PDF: https://ri.conicet.gov.ar/bitstream/handle/11336/258440/CONICET_Digital_Nro.a823987d-0311-4fb4-8f84-3871ccad740d_B.pdf?isAllowed=y&sequence=2
+
+Color and link styling
+Two accent colors: muted navy (#334E68) for headings, journal names, and hyperlinks; deep teal (#14665E) for Luis F. Recalde in the main heading and publication author lists. Hyperlinks have no underlines. The previous plum accent and separate link-blue shade were removed at Luis’s request for a more coherent palette. Publication titles are black and clickable, with no underlines, at Luis’s request. Body text remains black. The author emphasis remains visible in monochrome through bold weight. Palette definitions and the authorname/journal macros are near the top of the editable LaTeX source.
+
+Concise version restored
+At Luis’s request, the wording, abbreviations, and layout from before the abbreviation-expansion revision have been restored. Subsequent corrections remain: the displayed name is Luis F. Recalde; publication titles are black and clickable; the MSCKF entry is removed. The two removed IEEE Access papers remain excluded, and Service and Languages remain separate sections. The restored CV contains ten publications.
+
+The expanded-abbreviation version is archived in output/versions/expanded_abbreviations. The active PDF and LaTeX source use the concise version. The PDF remains text-based with Unicode mappings; text extraction and paper-link annotations are checked, without claiming verification of any employer’s screening system.
+
+Name preference
+The displayed name is Luis F. Recalde in the heading, footer, publication author emphasis, and PDF metadata, as requested. Existing deliverable filenames remain unchanged for continuity.
+
+Targeted method expansions and NYU bullet revision
+Following restoration of the concise version, Luis requested selective expansion of CLF, CBF, SQP, SQP-RTI, DDP, iLQR, ADMM, UAV, and DMDc. These are now written out where introduced in the experience or skills sections. Optimal-control solution methods remain in the MPC bullet, as requested. NMPC is introduced as nonlinear MPC after the model predictive control definition. CLFs, CBFs, and UAV are used in abbreviated form after their first definitions. Official publication titles retain their published wording. Other wording and the concise format remain as previously approved.
+
+The NYU bullet reads: “Developed control using control Lyapunov functions (CLFs) and control barrier functions (CBFs) for quadrotors with cable-suspended payloads, proving stability and camera field-of-view safety under hybrid slack–taut dynamics.” Section IV-E of the linked paper derives Lyapunov bounds and stability constraints for the hybrid system; Section IV-F defines the camera field-of-view safe set and barrier condition. The wording refers to the analysis under the paper’s modeled setting and assumptions; no independent proof audit was performed. “Experimentally validated” was removed from this bullet at Luis’s request.
+Source: https://arxiv.org/html/2504.08841v2
+
+Hybrid optimal-control wording
+The bullet now reads: “Nonsmooth and hybrid optimal control: complementarity-constrained formulations and relaxation methods for trajectory optimization across hybrid mode transitions.” This follows Luis’s explicit wording preference.
+
+DMDc skill link update
+The “Dynamic mode decomposition with control (DMDc)” text in the Data-driven modeling and control bullet now links directly to https://www.mdpi.com/1424-8220/22/13/4712 as requested. The bullet wording and both the Sensors 2022 and IFAC 2023 publication entries are unchanged.
+
+Visual and tactile servoing paper links
+The Visual and tactile servoing bullet now links “UAV photovoltaic array inspection” to Visual Servoing NMPC Applied to UAVs for Photovoltaic Array Inspection (https://doi.org/10.1109/LRA.2024.3360876), and “manipulator contour following” to VBT-MPC: Vision-Based Tactile MPC for Contour Following (https://doi.org/10.1109/LRA.2026.3698362). These are the corresponding papers already listed under Selected Publications. The link wording adds “array” to specify the photovoltaic inspection application.
+
+Odometry skill paper link
+“Dual-quaternion LiDAR odometry and mapping” now links to DualQuat-LOAM: LiDAR Odometry and Mapping Parametrized on Dual Quaternions (https://doi.org/10.1016/j.robot.2025.105009). The contracting nonlinear observers clause remains separate and unlinked; this paper is not presented as evidence for the LiDAR–inertial fusion claim.
