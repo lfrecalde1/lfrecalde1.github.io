@@ -10,7 +10,7 @@ nonlinear control theory, differential geometry, and numerical optimization. I t
 models and physics-based simulation to real-world experiments.
 
   RESEARCH EXPERIENCE
-  Graduate Research Assistant | Jan 2025 – Present
+  Research Assistant | Jan 2025 – Present
  Worcester Polytechnic Institute | Aerial-Robot Control and Perception Lab | Worcester, MA
     • Developed ACP Lab’s C++/ROS 2 MuJoCo simulator for aerial vehicles and cable-suspended payloads, combining
       aerodynamic and motor dynamics with simulated cameras and LiDAR.
