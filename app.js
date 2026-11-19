@@ -63,7 +63,10 @@
       .replace(/\bGuanrui Li\b/g, (name) => scholarLink(name, 'advisor'));
   }
 
-  const authors = (list = []) => list.map(linkPeople).join(', ');
+  const authors = (list = []) =>
+    list
+      .map((name) => (/^Luis F\.? Recalde$/.test(name) ? scholarLink(name) : escape(name)))
+      .join(', ');
 
   // Introduction: edit the profile content and destinations in research.js.
   $('#header-name').innerHTML = scholarLink(profile.name, 'self', 'wordmark');
