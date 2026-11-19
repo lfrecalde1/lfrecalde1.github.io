@@ -1,0 +1,29 @@
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+.env
+.env.*
+node_modules/
+*.log
+.vscode/
+.idea/
+_preview-*.html
+_site/
+# Original research recordings stay local; deploy the optimized assets instead.
+webpage_media/
+# The website uses the copy in assets/documents/.
+/Luis_Fernando_Recalde_Resume.pdf
+
+# Unused Hugo template files stay local when committing this static website.
+/config/
+/content/
+/layouts/
+/static/
+/go.mod
+/hugoblox.yaml
+/netlify.toml
+/.github/FUNDING.yml
+/.github/preview.webp
+/.github/workflows/import-publications.yml
+/.github/workflows/updater-wip.yml

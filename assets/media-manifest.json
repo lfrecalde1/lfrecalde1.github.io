@@ -1,0 +1,116 @@
+[
+  {
+    "source": "webpage_media/WebPage/webpage_images/dq_nmpc/dq_nmpc.png",
+    "output": "assets/images/flight-paths.webp",
+    "original_bytes": 1828793,
+    "bytes": 104852
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_images/tactile_visual_servoing/tactile_visual_servoing_control.png",
+    "output": "assets/images/tactile-servoing.webp",
+    "original_bytes": 844072,
+    "bytes": 59776
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_images/ES-HPC-MPC/cover.png",
+    "output": "assets/images/payload-sequence.webp",
+    "original_bytes": 625062,
+    "bytes": 25598
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_images/Dual_quaternion_lidar_odometry/lidar_odometry.png",
+    "output": "assets/images/lidar-odometry.webp",
+    "original_bytes": 1577097,
+    "bytes": 309584
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_images/Visual_Servoing_inspection/visual_servoing_inspection.png",
+    "output": "assets/images/solar-inspection.webp",
+    "original_bytes": 1251014,
+    "bytes": 92214
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/TI-MPC/aggressive_real.mp4",
+    "output": "assets/videos/tim-mpc-flight.mp4",
+    "poster": "assets/images/tim-mpc-flight.webp",
+    "original_bytes": 22403767,
+    "bytes": 177824
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/TI-MPC/aggressive_simulation.mp4",
+    "output": "assets/videos/tim-mpc-simulation.mp4",
+    "poster": "assets/images/tim-mpc-simulation.webp",
+    "original_bytes": 2809615,
+    "bytes": 66879
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/TI-MPC/regulation_real.mp4",
+    "output": "assets/videos/tim-mpc-regulation-flight.mp4",
+    "poster": "assets/images/tim-mpc-regulation-flight.webp",
+    "original_bytes": 5695592,
+    "bytes": 121764
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/TI-MPC/regulation_simulation.mp4",
+    "output": "assets/videos/tim-mpc-regulation-simulation.mp4",
+    "poster": "assets/images/tim-mpc-regulation-simulation.webp",
+    "original_bytes": 2394637,
+    "bytes": 55556
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/TI-MPC/lidar_planning_payload_simulation.mp4",
+    "output": "assets/videos/tim-mpc-planning.mp4",
+    "poster": "assets/images/tim-mpc-planning.webp",
+    "original_bytes": 12854103,
+    "bytes": 1045224
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/Simulator/fully_onboard_payload_transportation.mp4",
+    "output": "assets/videos/mujoco-payload.mp4",
+    "poster": "assets/images/mujoco-payload.webp",
+    "original_bytes": 41307431,
+    "bytes": 2849153
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/Simulator/fully_onboard_quadrotor_control.mp4",
+    "output": "assets/videos/mujoco-quadrotor.mp4",
+    "poster": "assets/images/mujoco-quadrotor.webp",
+    "original_bytes": 10107124,
+    "bytes": 836141
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/Simulator/rl_payload_transportation.mp4",
+    "output": "assets/videos/mujoco-learning.mp4",
+    "poster": "assets/images/mujoco-learning.webp",
+    "original_bytes": 22863100,
+    "bytes": 1275865
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/Multiple_quadrotor_payload_transportation/multiple_quadrotor_control_simulation.mp4",
+    "output": "assets/videos/mujoco-cooperative.mp4",
+    "poster": "assets/images/mujoco-cooperative.webp",
+    "original_bytes": 3321985,
+    "bytes": 127428
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/Multiple_quadrotor_payload_transportation/multiple_quadrotor_control_lidar_simulation.mp4",
+    "output": "assets/videos/mujoco-cooperative-lidar.mp4",
+    "poster": "assets/images/mujoco-cooperative-lidar.webp",
+    "original_bytes": 52842675,
+    "bytes": 3934447
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/Outdoor_lidar_multiple/outdor_flight_multiple_lidar.mp4",
+    "output": "assets/videos/outdoor-flight.mp4",
+    "poster": "assets/images/outdoor-flight.webp",
+    "original_bytes": 25096040,
+    "bytes": 1797047
+  },
+  {
+    "source": "webpage_media/WebPage/webpage_videos/DQ-NMPC/dq_code.gif",
+    "output": "assets/videos/dq-nmpc-demo.mp4",
+    "poster": "assets/images/dq-nmpc-demo.webp",
+    "original_bytes": 61017089,
+    "bytes": 96127
+  }
+]

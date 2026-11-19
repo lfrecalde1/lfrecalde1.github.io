@@ -1,0 +1,22 @@
+name: Check website
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v6
+      - name: Check JavaScript and local assets
+        run: node scripts/check-site.mjs
+# GitHub Pages publishes main / (root) through its built-in deployment.
+# This workflow validates the site; it does not create a second deployment.

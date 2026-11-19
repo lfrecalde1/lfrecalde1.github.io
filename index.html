@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luis F. Recalde | Robotics & Control</title>
+    <meta
+      name="description"
+      content="Luis F. Recalde, research engineer and PhD candidate at WPI. Nonlinear control, numerical optimization, state estimation, and robotics."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <script>
+      (() => {
+        let savedTheme;
+        try {
+          savedTheme = localStorage.getItem('portfolio-theme');
+        } catch {}
+        document.documentElement.dataset.theme =
+          savedTheme === 'light' || savedTheme === 'dark'
+            ? savedTheme
+            : matchMedia('(prefers-color-scheme: dark)').matches
+              ? 'dark'
+              : 'light';
+      })();
+    </script>
+    <meta property="og:title" content="Luis F. Recalde | Robotics & Control" />
+    <meta
+      property="og:description"
+      content="Research, publications, and experience in control, optimization, and robotics."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/inter-variable.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="research.js" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div id="header-name"></div>
+      <nav id="navigation" aria-label="Main navigation">
+        <a href="#additional-projects">Current work</a><a href="#research">Publications</a
+        ><a href="#experience">About</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <button
+          id="theme-toggle"
+          class="theme-toggle"
+          type="button"
+          aria-label="Switch to dark mode"
+        >
+          Dark mode
+        </button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">
+          Menu
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="intro" id="about" aria-labelledby="intro-title"></section>
+      <section
+        id="additional-projects"
+        class="additional-projects"
+        hidden
+        aria-labelledby="projects-title"
+      >
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">From simulation to Real-World Experiments</p>
+            <h2 id="projects-title">Current work</h2>
+          </div>
+          <p class="section-description">
+            A closer look at the controllers, simulators, and experiments I’m working on.
+          </p>
+        </div>
+        <div id="project-list"></div>
+      </section>
+      <section id="research" class="research" aria-labelledby="research-title">
+        <div class="section-intro">
+          <div>
+            <p class="eyebrow">Research</p>
+            <h2 id="research-title">Selected publications</h2>
+          </div>
+          <p class="section-description">
+            Control, optimization, and perception for robots that interact with the world.
+          </p>
+        </div>
+        <div class="research-tools">
+          <label class="sr-only" for="paper-search">Find a publication</label>
+          <input id="paper-search" type="search" placeholder="Search title, author, or topic…" />
+          <label class="sr-only" for="topic-filter">Research area</label>
+          <select id="topic-filter">
+            <option value="all">All research areas</option>
+            <option value="control">Control & optimization</option>
+            <option value="perception">Perception & estimation</option>
+            <option value="interaction">Robot interaction</option>
+          </select>
+          <p id="result-count" class="result-count" role="status"></p>
+        </div>
+        <div id="featured-publications"></div>
+        <div id="earlier-publications" class="earlier-publications"></div>
+        <p id="no-results" class="no-results" hidden>
+          No publications match. Try another search or research area.
+        </p>
+      </section>
+      <section id="experience" class="experience text-section" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Experience</p>
+          <h2 id="experience-title">Research experience</h2>
+          <p>
+            My work spans controller design, simulation, and implementation on robotic hardware.
+          </p>
+        </div>
+        <div id="experience-list" class="timeline"></div>
+      </section>
+      <section id="background" class="background text-section" aria-labelledby="background-title">
+        <div class="section-heading">
+          <p class="eyebrow">Background</p>
+          <h2 id="background-title">Education</h2>
+          <p>Training in robotics, control systems, and mechatronics.</p>
+          <div id="education-cv" class="section-links"></div>
+        </div>
+        <div class="background-content"><div id="education-list" class="education-list"></div></div>
+      </section>
+      <section id="skills" class="skills text-section" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Expertise</p>
+          <h2 id="skills-title">Technical skills</h2>
+          <p>
+            From geometric models and numerical optimization to perception and deployment on real
+            robots.
+          </p>
+        </div>
+        <div class="skills-content">
+          <div id="expertise-list" class="expertise-list"></div>
+          <h3 id="tools-title" class="tools-title">Software & tools</h3>
+          <dl id="tools-list" class="tools-list" aria-labelledby="tools-title"></dl>
+          <p id="service" class="service"></p>
+        </div>
+      </section>
+      <section id="contact" class="contact" aria-labelledby="contact-title"></section>
+    </main>
+    <footer class="site-footer">
+      <p>© <span id="year"></span> <span id="footer-name"></span></p>
+      <a href="#about">Back to top</a>
+    </footer>
+    <dialog id="citation-dialog" aria-labelledby="citation-title">
+      <div class="dialog-heading">
+        <h2 id="citation-title">Citation</h2>
+        <button id="close-citation" class="button">Close</button>
+      </div>
+      <p id="citation-paper"></p>
+      <pre id="bibtex" tabindex="0"></pre>
+      <div class="dialog-actions">
+        <button id="copy-citation" class="button button-primary">Copy BibTeX</button
+        ><button id="download-citation" class="button">Download .bib</button
+        ><span id="copy-status" role="status"></span>
+      </div>
+    </dialog>
+    <noscript
+      ><div class="noscript">
+        This page uses JavaScript to display its editable content. You can also visit
+        <a href="https://scholar.google.com/citations?user=_v1511cAAAAJ&hl=en">Google Scholar</a>.
+      </div></noscript
+    >
+  </body>
+</html>

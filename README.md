@@ -15,7 +15,7 @@ The website files live at the repository root. It uses plain HTML, CSS, and Java
 Clone the website and start a local server:
 
 ```bash
-git clone https://github.com/lfrecalde1/lfrecalde1.github.io.git
+git clone git@github.com:lfrecalde1/lfrecalde1.github.io.git
 cd lfrecalde1.github.io
 python3 -m http.server 8000
 ```
@@ -34,6 +34,7 @@ Open **http://localhost:8000**. Edit a file and refresh the browser. Stop the se
 | `index.html` | Page sections, navigation, and search-engine metadata |
 | `app.js` | Rendering, search/filter, citations, and mobile navigation |
 | `scripts/prepare-media.py` | Recreate optimized images, MP4 loops, and video posters from the original media |
+| `scripts/check-site.mjs` | Validate JavaScript, content ids, and all referenced local assets before publishing |
 | `assets/media-manifest.json` | Original-to-export mappings and file sizes |
 | `SOURCES.md` | Content and image attribution |
 
@@ -48,7 +49,7 @@ Open **http://localhost:8000**. Edit a file and refresh the browser. Stop the se
 - **Page structure:** `index.html` defines the sections; `app.js` fills them from the content file and handles search, galleries, themes, and citations. Comments group the related code.
 - **Formatting:** `.editorconfig` and `.prettierrc.json` keep indentation and formatting consistent. If you use Prettier, run `npx prettier@3.6.2 --write index.html styles.css app.js research.js`. This is optional; Node and Prettier are not needed to run or publish the site.
 
-Before publishing, run `node --check app.js` and `node --check research.js` if Node is installed, then preview the site in a browser. Check the light/dark toggle, mobile layout, publication search, and any links or media you changed.
+Before publishing, run `node scripts/check-site.mjs` if Node is installed, then preview the site in a browser. Check the light/dark toggle, mobile layout, publication search, and any links or media you changed. The same validation runs in GitHub Actions after each push and on pull requests.
 
 ## Update the downloadable CV
 
@@ -141,7 +142,7 @@ For multiple demonstrations, use a `demos` array instead of `media`. Each item a
 
 ## Prepare the supplied media
 
-The original files live in `webpage_media/WebPage/`. That folder is ignored by Git; the originals remain unchanged on disk. The Pages workflow publishes only the optimized files in `assets/`.
+The original files live in `webpage_media/WebPage/`. That folder is ignored by Git; the originals remain unchanged on disk. Only the optimized files in `assets/` are committed for the website.
 
 The original root-level `Luis_Fernando_Recalde_Resume.pdf` is also ignored; the downloadable copy in `assets/documents/` is committed. No original recordings or temporary preview files are needed to run the website from a fresh clone.
 
@@ -155,17 +156,33 @@ The script converts the five publication PNGs to WebP and all twelve animated so
 
 The portrait stays in `profile.portrait`; the large introduction photograph is configured separately in `profile.hero`.
 
-## Publish the redesign with GitHub Pages
+## Publish with SSH and GitHub Pages
 
-The site also works with the existing **Deploy from a branch → main → /(root)** Pages setting. The `.nojekyll` file keeps the plain static files intact.
+This repository uses **Settings → Pages → Deploy from a branch → main → /(root)**. This setting was verified on the recreated repository on 19 November 2026. Keep this source selected; the site requires no Hugo or Jekyll build. The committed `.nojekyll` file tells Pages to serve the static files directly.
 
 The personal-site repository is already correctly named `lfrecalde1.github.io`. Its root Pages address is https://lfrecalde1.github.io/; no additional repository name appears in the URL.
 
-The workflow in `.github/workflows/publish.yaml` deploys the website files from the repository root. It runs on pushes to `main` or by manual dispatch. Pushing to `main` triggers deployment. In the repository's **Settings → Pages → Build and deployment**, select **GitHub Actions** if it is not selected already, then check the **Deploy website to GitHub Pages** run in Actions.
+Push the committed files using the SSH remote:
 
-Afterward, commits pushed to `main` update the website. This follows the [GitHub Pages custom workflow documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
+```bash
+git remote -v
+git push -u origin main
+```
 
-The previous Hugo content, configuration, and theme files remain in the repository for reference. This redesign serves the root HTML, CSS, and JavaScript files directly and does not use Hugo. The previous README is in `docs/legacy-hugo-README.md`. The original template license remains in `LICENSE.md`; the new website code is covered by `LICENSE`.
+The remote should be `git@github.com:lfrecalde1/lfrecalde1.github.io.git`. If this checkout does not select your non-default SSH key automatically, configure it locally:
+
+```bash
+git config --local core.sshCommand 'ssh -i ~/.ssh/id_ed25519_github -o IdentitiesOnly=yes'
+git ls-remote origin refs/heads/main
+```
+
+This setting stays in this checkout’s `.git/config`; the SSH key is never added to the repository. SSH controls Git authentication. GitHub Pages uses the repository’s publishing settings independently.
+
+After pushing, open the repository’s **Actions** tab. GitHub’s built-in **pages build and deployment** workflow publishes the website. `.github/workflows/check-website.yaml` separately checks JavaScript and required assets; it does not deploy a second copy. A successful local check does not confirm the live deployment—wait for the Pages run to finish before checking the public URL.
+
+Future commits pushed to `main` update the website. This follows the [GitHub Pages publishing-source documentation](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+The previous Hugo content, configuration, template workflows, and Netlify configuration remain locally and are ignored by this new repository. They are not required for the static site. The previous README is retained in `docs/legacy-hugo-README.md`. The original template license remains in `LICENSE.md`; the website code is covered by `LICENSE`.
 
 The private ChatGPT preview is a separate deployment. Editing GitHub files does not automatically update that preview.
 
@@ -176,11 +193,10 @@ The private ChatGPT preview is a separate deployment. Editing GitHub files does 
 - Publication dates follow the supplied CV. ES-HPC-MPC uses its 2026 issue year; DQ-MPCC is labeled accepted.
 - The PhD is in progress; the site does not claim a completed PhD.
 - Biography, career dates, education, technical skills, software, and review service use `Luis_Fernando_Recalde_Resume.pdf`, including the May–December 2024 NYU visit. “Research Assistant” follows Luis’s requested display title.
-- CV download links appear in the introduction, education, and contact sections. To update the downloadable copy, copy the new PDF to `assets/documents/Luis_Fernando_Recalde_CV.pdf`; the existing deployment workflow includes everything in `assets/`.
+- CV download links appear in the introduction, education, and contact sections. To update the downloadable copy, copy the new PDF to `assets/documents/Luis_Fernando_Recalde_CV.pdf` and commit the updated file.
 - Research figures link to the respective papers or project pages. Replace them with your preferred photos or videos at any time.
 - Search and filters work locally in the browser. No analytics, tracking, account system, or database is included.
 
 ## License
 
 Original website code is provided under the MIT License in `LICENSE`. The CV, portrait, research figures, and videos are excluded from that license; rights remain with their respective authors. Inter is licensed under the SIL Open Font License; see `assets/OFL.txt`. See `SOURCES.md` for provenance.
-# lfrecalde1.github.io
