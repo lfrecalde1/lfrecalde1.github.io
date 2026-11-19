@@ -38,12 +38,6 @@ Check the website files before committing:
 node scripts/check-site.mjs
 ```
 
-Preview your changes, commit the edited files, then push:
-
-```bash
-git push origin main
-```
-
 GitHub Pages uses **Settings → Pages → Deploy from a branch → main → /(root)**. Keep `.nojekyll` in the repository. Check the **Actions** tab for deployment status.
 
 Content and media sources are documented in [SOURCES.md](SOURCES.md). Code licensing is in [LICENSE](LICENSE).
