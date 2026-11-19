@@ -611,7 +611,7 @@ window.portfolio = {
     {
       'id': 'tim-mpc',
       'title': 'TI-MPC for aerial payload transport',
-      'category': 'Predictive control · Ongoing research',
+      'category': 'Predictive control of hybrid systems',
       'summary':
         'TI-MPC combines a differentiable discrete-time quadrotor–payload model with closed-form cable impulses and analytical sensitivities to smoothly approximate slack–taut transitions without external mode scheduling. A real-time Box-FDDP solver jointly optimizes quadrotor and payload tracking under actuator constraints. Simulation and hardware experiments compare regulation and trajectory-tracking performance against hybrid control baselines, including agile payload transportation.',
       'note': 'Work in progress',
