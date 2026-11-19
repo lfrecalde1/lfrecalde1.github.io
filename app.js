@@ -76,11 +76,15 @@
       >Aerial-robot Control and Perception (ACP) Lab</a
     >`
   );
+  const researchSummary = escape(profile.research).replace(
+    /nonlinear control theory|differential geometry|numerical optimization/g,
+    (phrase) => /* HTML */ `<strong class="research-highlight">${phrase}</strong>`
+  );
   $('#about').innerHTML = /* HTML */ `<div class="intro-copy">
       <p class="eyebrow">Control · Optimization · Robotics</p>
       <h1 id="intro-title">Hola, I'm <span class="name">${scholarLink(profile.name + '.')}</span></h1>
       <p class="lead">${intro}</p>
-      <p>${escape(profile.research)}</p>
+      <p>${researchSummary}</p>
       <p>${escape(profile.practice)}</p>
       <div class="interests">
         <h2>Research interests</h2>
