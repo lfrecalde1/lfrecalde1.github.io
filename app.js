@@ -78,7 +78,7 @@
   );
   $('#about').innerHTML = /* HTML */ `<div class="intro-copy">
       <p class="eyebrow">Control · Optimization · Robotics</p>
-      <h1 id="intro-title">Hi, I'm <span class="name">${scholarLink(profile.name + '.')}</span></h1>
+      <h1 id="intro-title">Hola, I'm <span class="name">${scholarLink(profile.name + '.')}</span></h1>
       <p class="lead">${intro}</p>
       <p>${escape(profile.research)}</p>
       <p>${escape(profile.practice)}</p>
